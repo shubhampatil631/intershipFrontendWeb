@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Courses MoreCourses.html</title>
+
+    <!-- Google font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <style>
+      .login-container {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        padding: 0;
+      }
+      .form-wrapper {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 600px;
+        text-align: center;
+      }
+      .form-wrapper h2 {
+        margin-bottom: 30px;
+        color: #333;
+      }
+      .form-wrapper input[type="text"],
+      .form-wrapper input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .form-wrapper input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      .form-wrapper input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      /* Container for horizontal scrolling */
+      .table-container {
+        width: 100%;
+        overflow-x: auto;
+        max-height: 400px;
+      }
+    </style>
+  </head>
+  <body onload="showStudent()">
+    <!-- Header -->
+    <header id="header" class="transparent-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- Logo -->
+          <div class="navbar-brand">
+            <a class="logo" href="index.html">
+              <img
+                src="./img/png.png"
+                alt="logo"
+                style="width: 100 height100"
+              />
+            </a>
+          </div>
+          <!-- /Logo -->
+
+          <!-- Mobile toggle -->
+          <button class="navbar-toggle">
+            <span></span>
+          </button>
+          <!-- /Mobile toggle -->
+        </div>
+
+        <!-- Navigation -->
+        <nav id="nav">
+          <ul
+            class="main-menu nav navbar-nav navbar-right glyphicon-text-color:black-text"
+          >
+            <li>
+              <a href="index.html" style="color: black">Home</a>
+            </li>
+            <li><a href="#" style="color: black">About</a></li>
+            <li><a href="MoreCourses.html" style="color: black">Courses</a></li>
+            <li><a href="contact.html" style="color: black">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- /Navigation -->
+      </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Courses -->
+    <div id="courses" class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <div class="section-header text-center">
+            <h2>Internship Applicant :</h2>
+            <p class="lead">
+              Embrace the Opportunity: Your Path to Internship Success Begins
+              Here.
+            </p>
+          </div>
+        </div>
+        <!-- /row -->
+        <div>
+          <div class="table-container">
+            <table border="1" style="width: 100%" id="studentTable">
+              <thead>
+                <tr>
+                  <th>Student Name</th>
+                  <th>College</th>
+                  <th>Course</th>
+                  <th>Branch</th>
+                  <th>Internship</th>
+                  <th>Number</th>
+                  <th>Email ID</th>
+                  <th>Subject</th>
+                  <th>Message</th>
+                </tr>
+              </thead>
+              <tbody id="studentTableBody">
+                <!-- Table body will be populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- container -->
+    </div>
+    <!-- /Courses -->
+
+    <!-- Call To Action -->
+    <div id="cta" class="section">
+      <!-- Backgound Image -->
+      <div
+        class="bg-image bg-parallax overlay"
+        style="background-image: url(./img/cta1-background.jpg)"
+      ></div>
+      <!-- /Backgound Image -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="white-text">
+              Embark on your internship journey; greatness awaits.
+            </h2>
+            <p class="lead white-text">
+              Step into your internship; ignite your potential.
+            </p>
+            <a class="main-button icon-button" href="#">Get Started!</a>
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /Call To Action -->
+
+    <!-- Why us -->
+    <div id="why-us" class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <div class="section-header text-center">
+            <h2>Why SWARA Software Solution</h2>
+            <p class="lead">
+              SWARA Software Solution offers valuable internship opportunities
+              for aspiring individuals looking to gain hands-on experience in
+              the dynamic world of software development.
+            </p>
+          </div>
+
+          <!-- feature -->
+          <div class="col-md-4">
+            <div class="feature">
+              <i class="feature-icon fa fa-flask"></i>
+              <div class="feature-content">
+                <h4>Online Courses</h4>
+                <p>
+                  Explore a range of online courses offered by SWARA Software
+                  Solution to enhance your skills and advance your career in
+                  technology.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /feature -->
+
+          <!-- feature -->
+          <div class="col-md-4">
+            <div class="feature">
+              <i class="feature-icon fa fa-users"></i>
+              <div class="feature-content">
+                <h4>Expert Teachers</h4>
+                <p>
+                  At SWARA Software Solution, learn from industry experts who
+                  bring real-world experience to their teaching, ensuring a
+                  comprehensive and practical learning experience.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /feature -->
+
+          <!-- feature -->
+          <div class="col-md-4">
+            <div class="feature">
+              <i class="feature-icon fa fa-comments"></i>
+              <div class="feature-content">
+                <h4>Community</h4>
+                <p>
+                  At SWARA Software Solution, join a vibrant community of
+                  like-minded individuals, fostering collaboration, networking,
+                  and support throughout your learning journey.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /feature -->
+        </div>
+        <!-- /row -->
+
+        <hr class="section-hr" />
+
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /Why us -->
+
+    <!-- Contact CTA -->
+    <div id="contact-cta" class="section">
+      <!-- Backgound Image -->
+      <div
+        class="bg-image bg-parallax overlay"
+        style="background-image: url(./img/cta2-background.jpg)"
+      ></div>
+      <!-- Backgound Image -->
+
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h2 class="white-text">Contact Us</h2>
+            <p class="lead white-text">
+              Swara software solutions Address: a/p: Sangli near vasantdada
+              sugar factory, Chintamani nagar bus stop , Omkar arked , second
+              floor , sangli Domain: webdeve
+            </p>
+            <a class="main-button icon-button" href="contact.html"
+              >Contact Us Now</a
+            >
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /Contact CTA -->
+
+    <!-- Footer -->
+    <footer id="footer" class="section">
+      <!-- container -->
+      <div class="container">
+        <!-- row -->
+        <div class="row">
+          <!-- footer logo -->
+          <div class="col-md-6">
+            <div class="footer-logo">
+              <a class="logo" href="index.html">
+                <img src="./img/mainlogo.png" alt="logo" />
+              </a>
+            </div>
+          </div>
+          <!-- footer logo -->
+
+          <!-- footer nav -->
+          <div class="col-md-6">
+            <ul class="footer-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="MoreCourses.html">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <!-- /footer nav -->
+        </div>
+        <!-- /row -->
+
+        <!-- row -->
+        <div id="bottom-footer" class="row">
+          <!-- social -->
+          <div class="col-md-4 col-md-push-8">
+            <ul class="footer-social">
+              <li>
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="google-plus"
+                  ><i class="fa fa-google-plus"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="instagram"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8 col-md-pull-4">
+            <div class="footer-copyright">
+              <span
+                >Unlock your potential with our dynamic internship opportunities
+                – where innovation meets opportunity, and your future
+                begins.</span
+              >
+            </div>
+          </div>
+          <!-- /copyright -->
+        </div>
+        <!-- row -->
+      </div>
+      <!-- /container -->
+    </footer>
+    <!-- /Footer -->
+
+    <!-- preloader -->
+    <div id="preloader"><div class="preloader"></div></div>
+    <!-- /preloader -->
+
+    <!-- jQuery Plugins -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      // Make a GET request to fetch student data
+      function showStudent() {
+        axios
+          .get("http://localhost:5050/getStudent")
+          .then((response) => {
+            // Get a reference to the table body
+            const tableBody = document.getElementById("studentTableBody");
+
+            // Iterate over the data and populate the table rows
+            response.data.forEach((student) => {
+              const row = document.createElement("tr");
+
+              // Populate table cells with student data
+              const fields = [
+                "stdname",
+                "college",
+                "course",
+                "branch",
+                "internship",
+                "mono",
+                "emailid",
+                "subject",
+                "msg",
+              ];
+              fields.forEach((field) => {
+                const cell = document.createElement("td");
+                cell.textContent = student[field];
+                row.appendChild(cell);
+              });
+
+              // Append the row to the table body
+              tableBody.appendChild(row);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching student data:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
